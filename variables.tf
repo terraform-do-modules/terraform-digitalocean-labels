@@ -48,11 +48,6 @@ variable "delimiter" {
   default     = "-"
   description = "Delimiter to be used between `organization`, `name`, `environment` and `attributes`."
 }
-variable "repository" {
-  type        = string
-  default     = "https://github.com/terraform-do-modules/terraform-digitalocean-labels.git"
-  description = "Terraform current module repo"
-}
 
 variable "extra_tags" {
   type        = map(string)
