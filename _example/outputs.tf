@@ -10,10 +10,10 @@ output "name" {
 
 output "environment" {
   value       = module.labels.environment
-  description = "Normalized name."
+  description = "Normalized environment."
 }
 
 output "managedby" {
   value       = module.labels.managedby
-  description = "Normalized name."
+  description = "Normalized managedby."
 }
