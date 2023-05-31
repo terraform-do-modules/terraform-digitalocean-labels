@@ -17,37 +17,37 @@ jobs:
         with:
           actions_subcommand: 'fmt'
 
-      - name: 'Terraform init basic'
+      - name: 'Terraform init basic example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'init'
           tf_actions_working_dir: ./_examples/basic
 
-      - name: 'Terraform init complete'
+      - name: 'Terraform init complete example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'init'
           tf_actions_working_dir: ./_examples/complete
 
-      - name: 'Terraform validate basic'
+      - name: 'Terraform validate basic example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'validate'
           tf_actions_working_dir: ./_examples/basic
 
-      - name: 'Terraform validate complete'
+      - name: 'Terraform validate complete example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'validate'
           tf_actions_working_dir: ./_examples/complete
 
-      - name: 'Terraform plan basic'
+      - name: 'Terraform plan basic example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'plan'
           tf_actions_working_dir: ./_examples/basic
 
-      - name: 'Terraform plan complete'
+      - name: 'Terraform plan complete example'
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
           actions_subcommand: 'plan'
