@@ -1,5 +1,5 @@
-## Managed By : CloudDrove
-## Copyright @ CloudDrove. All Right Reserved.
+## Managed By : terraform-do-modules
+## Copyright @ terraform-do-modules. All Right Reserved.
 
 #Module      : locals
 #Description : This terraform module is designed to generate consistent label names and tags

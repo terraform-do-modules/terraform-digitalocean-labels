@@ -1,6 +1,6 @@
-// Managed By : CloudDrove
+// Managed By : terraform-do-modules
 // Description : This Terratest is used to test the Terraform labels module.
-// Copyright @ CloudDrove. All Right Reserved.
+// Copyright @ terraform-do-modules. All Right Reserved.
 package test
 
 import (
