@@ -1,5 +1,5 @@
 // Managed By : CloudDrove
-// Description : This Terratest is used to test the Terraform public subnet module.
+// Description : This Terratest is used to test the Terraform labels module.
 // Copyright @ CloudDrove. All Right Reserved.
 package test
 
