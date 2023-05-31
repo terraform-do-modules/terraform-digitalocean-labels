@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.DO_TOKEN }}
 
-      - name: 'Terratest'
+      - name: 'Terratest basic'
         if: ${{ github.event.label.name == 'terratest' }}
         uses: 'clouddrove/github-actions@v9.0.1'
         with:
@@ -29,3 +29,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DO_TOKEN: ${{ secrets.DO_TOKEN }}
 
+      - name: 'Terratest complete'
+        if: ${{ github.event.label.name == 'terratest' }}
+        uses: 'clouddrove/github-actions@v9.0.1'
+        with:
+          actions_subcommand: 'terratest'
+          tf_actions_working_dir: '_test'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}

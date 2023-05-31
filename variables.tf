@@ -30,7 +30,6 @@ variable "tags" {
   description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)."
 }
 
-
 variable "managedby" {
   type        = string
   default     = "CloudDrove"

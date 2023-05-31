@@ -1,5 +1,4 @@
 name: static-checks
-
 on:
   pull_request:
 

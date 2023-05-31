@@ -32,7 +32,6 @@ locals {
     environment = local.environment
     managedby   = local.managedby
   }
-
   generated_tags = { for l in keys(local.tags_context) : title(l) => local.tags_context[l] if length(local.tags_context[l]) > 0 }
 
   tags = merge(local.generated_tags, var.extra_tags)
@@ -53,7 +52,6 @@ resource "digitalocean_tag" "environment" {
   count = var.enabled == true ? 1 : 0
   name  = local.environment
 }
-
 
 resource "digitalocean_tag" "managedby" {
   count = var.enabled == true ? 1 : 0
