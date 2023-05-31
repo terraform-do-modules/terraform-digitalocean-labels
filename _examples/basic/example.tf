@@ -5,7 +5,7 @@ provider "digitalocean" {
 }
 
 module "labels" {
-  source      = "./../"
+  source      = "./../../"
   name        = "labels"
   environment = "test"
   label_order = ["name", "environment"]

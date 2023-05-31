@@ -1,5 +1,5 @@
 // Managed By : CloudDrove
-// Description : This Terratest is used to test the Terraform EC2 module.
+// Description : This Terratest is used to test the Terraform public subnet module.
 // Copyright @ CloudDrove. All Right Reserved.
 package test
 
@@ -13,9 +13,9 @@ func Test(t *testing.T) {
 	t.Parallel()
 
 	terraformOptions := &terraform.Options{
-		// Source path of Terraform directory.
-		TerraformDir: "../_example",
-		Upgrade: true,
+		// The path to where our Terraform code is located
+		TerraformDir: "../../_example/complete",
+		Upgrade:      true,
 	}
 
 	// This will run 'terraform init' and 'terraform application' and will fail the test if any errors occur
