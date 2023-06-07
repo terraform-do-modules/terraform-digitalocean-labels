@@ -15,3 +15,4 @@ module "labels" {
     Application = "test"
   }
 }
+
