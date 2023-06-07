@@ -2,7 +2,6 @@
 #
 # This is the canonical configuration for the `README.md`
 # Run `make readme` to rebuild the `README.md`
-#
 
 # Name of this project
 name : Terraform DigitalOcean Labels
@@ -32,7 +31,7 @@ include:
 
 # How to use this project
 usage : |-
-  ### Simple Example
+  ### Example
   Here is an example of how you can use this module in your inventory structure:
   ```hcl
       module "labels" {
@@ -41,5 +40,9 @@ usage : |-
       name        = "labels"
       environment = "test"
       label_order = ["name", "environment"]
+      attributes  = ["private"]
+       extra_tags = {
+        Application = "test"
+        }
       }
   ```
