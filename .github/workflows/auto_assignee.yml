@@ -5,4 +5,4 @@ jobs:
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
     with:
-      assignees: d4kverma, anmolnagpal
+      assignees: 'clouddrove-ci'
