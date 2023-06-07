@@ -9,6 +9,6 @@ jobs:
   assign-pr:
     uses: clouddrove/github-shared-workflows/.github/workflows/auto_assignee.yml@master
     secrets:
-      GITHUB: ${{ secrets.TOKEN_GITHUB }}
+      GITHUB: ${{ secrets.GITHUB }}
     with:
       assignees: 'clouddrove-ci'
