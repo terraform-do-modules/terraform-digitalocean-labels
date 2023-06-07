@@ -1,9 +1,9 @@
 # Tf check workflow checks for min, max version , terraform fmt , terraform init & terraform validate in your terraform code.
-name: tf-test-checks
+name: tf-checks
 
 on:
   workflow_call:
-  # inputs can be defined to use during workflow call.
+    # inputs can be defined to use during workflow call.
   push:
     branches: [ master ]
   pull_request:
@@ -30,8 +30,6 @@ jobs:
       - name: Terraform min/max versions
         id: minMax
         uses: clowdhaus/terraform-min-max@main
-#        with:
-#          directory: ${{ inputs.working_directory}}
     outputs:
       minVersion: ${{ steps.minMax.outputs.minVersion }}
       maxVersion: ${{ steps.minMax.outputs.maxVersion }}
@@ -67,6 +65,7 @@ jobs:
           cd ${{ matrix.directory }}
           terraform init
           terraform validate
+
   # Action to verfiy terraform formatting .
   format:
     name: Check code format
