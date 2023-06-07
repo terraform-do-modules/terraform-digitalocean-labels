@@ -9,7 +9,7 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/terraform.yml@master
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
-      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DO_TOKEN }}
     with:
       provider: 'digitalocean'
       working_directory: './_examples/basic'
@@ -18,7 +18,7 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/terraform.yml@master
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
-      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DO_TOKEN }}
     with:
       provider: 'digitalocean'
       working_directory: './_examples/complete'

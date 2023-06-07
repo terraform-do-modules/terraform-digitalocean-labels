@@ -12,7 +12,7 @@ func Test(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		// The path to where our Terraform code is located
-		TerraformDir: "../../_example/complete",
+		TerraformDir: "../../_examples/complete",
 		Upgrade:      true,
 	}
 

@@ -17,7 +17,7 @@ jobs:
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          token: ${{ secrets.DO_TOKEN }}
 
       - name: 'Terratest basic example'
         if: ${{ github.event.label.name == 'terratest' }}
@@ -27,7 +27,7 @@ jobs:
           tf_actions_working_dir: '_test/basic_example'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DO_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}
 
       - name: 'Terratest complete example'
         if: ${{ github.event.label.name == 'terratest' }}
@@ -37,4 +37,4 @@ jobs:
           tf_actions_working_dir: '_test/complete_example'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DO_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}
