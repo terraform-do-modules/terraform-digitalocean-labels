@@ -31,17 +31,7 @@ include:
 
 # How to use this project
 usage : |-
-  ### basic Example
-  Here is an example of how you can use this module in your inventory structure:
-  ```hcl
-      module "labels" {
-      source      = "terraform-do-modules/labels/digitalocean"
-      version     = "0.15.0"
-      name        = "labels"
-      environment = "test"
-      }
-  ```
-  ### complete Example
+  ### Example
   Here is an example of how you can use this module in your inventory structure:
   ```hcl
       module "labels" {
