@@ -1,5 +1,5 @@
 # Tf check workflow checks for min, max version , terraform fmt , terraform init & terraform validate in your terraform code.
-name: tf-checks
+name: tf-test-checks
 
 on:
   workflow_call:
