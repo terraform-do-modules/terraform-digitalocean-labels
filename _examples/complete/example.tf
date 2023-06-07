@@ -1,8 +1,10 @@
 provider "digitalocean" {
-  # You need to set this in your .bashrc
-  # export DIGITALOCEAN_TOKEN="Your API TOKEN"
+  token = ""
 }
 
+##-----------------------------------------------------------------------------
+## Labels module callled that will be used for naming and tags.
+##-----------------------------------------------------------------------------
 module "labels" {
   source      = "./../../"
   name        = "labels"
@@ -10,6 +12,6 @@ module "labels" {
   label_order = ["name", "environment"]
   attributes  = ["private"]
   extra_tags = {
-    Application = "CloudDrove"
+    Application = "test"
   }
 }

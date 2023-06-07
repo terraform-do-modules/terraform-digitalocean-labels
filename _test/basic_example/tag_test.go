@@ -1,6 +1,4 @@
-// Managed By : terraform-do-modules
 // Description : This Terratest is used to test the Terraform labels module.
-// Copyright @ terraform-do-modules. All Right Reserved.
 package test
 
 import (

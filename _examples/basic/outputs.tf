@@ -12,8 +12,3 @@ output "environment" {
   value       = module.labels.environment
   description = "Normalized environment."
 }
-
-output "managedby" {
-  value       = module.labels.managedby
-  description = "Normalized managedby."
-}

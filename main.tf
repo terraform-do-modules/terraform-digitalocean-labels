@@ -1,9 +1,6 @@
-## Managed By : terraform-do-modules
-## Copyright @ terraform-do-modules. All Right Reserved.
-
 #Module      : locals
 #Description : This terraform module is designed to generate consistent label names and tags
-#     for resources. You can use terraform-labels to implement a strict naming convention.
+#for resources. You can use terraform-labels to implement a strict naming convention.
 locals {
   label_order_defaults = {
     label_order = ["name", "environment"]
@@ -27,7 +24,7 @@ locals {
   delimiter   = local.enabled == true ? lower(format("%v%s", "delimiter:-", var.delimiter)) : ""
 
   tags_context = {
-    # For AWS we need `Name` to be disambiguated sine it has a special meaning
+    # For digitalocean we need `Name` to be disambiguated sine it has a special meaning
     name        = local.id
     environment = local.environment
     managedby   = local.managedby
@@ -38,6 +35,9 @@ locals {
 
 }
 
+##-----------------------------------------------------------------------------
+## Below resources will create Tag resource.
+##-----------------------------------------------------------------------------
 resource "digitalocean_tag" "id" {
   count = var.enabled == true ? 1 : 0
   name  = local.id

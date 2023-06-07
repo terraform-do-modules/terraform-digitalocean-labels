@@ -1,11 +1,11 @@
-name: tf-static-checks
+name: TF-Lint
 on:
   push:
     branches: [ master ]
   pull_request:
   workflow_dispatch:
 jobs:
-  tf-static-checks:
-    uses: clouddrove/test-tfsec/.github/workflows/tf-static-checks.yml@master
+  tf-lint:
+    uses: clouddrove/test-tfsec/.github/workflows/tflint.yaml@master
     secrets:
       GITHUB: ${{ secrets.GITHUB }}

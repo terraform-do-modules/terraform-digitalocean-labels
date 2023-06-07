@@ -1,0 +1,8 @@
+name: Assignees
+jobs:
+  assign-pr:
+    uses: clouddrove/github-shared-workflows/.github/workflows/auto-assignee.yml@master
+    secrets:
+      GITHUB: ${{ secrets.GITHUB }}
+    with:
+      assignees: d4kverma, anmolnagpal

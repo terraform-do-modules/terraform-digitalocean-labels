@@ -33,7 +33,7 @@ variable "tags" {
 variable "managedby" {
   type        = string
   default     = "terraform-do-modules"
-  description = "ManagedBy, eg 'terraform-do-modules' or 'AnmolNagpal'."
+  description = "ManagedBy, eg 'terraform-do-modules' or 'hello@clouddrove.com'"
 }
 
 variable "enabled" {
