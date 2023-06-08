@@ -39,21 +39,21 @@ locals {
 ## Below resources will create Tag resource.
 ##-----------------------------------------------------------------------------
 resource "digitalocean_tag" "id" {
-  count = var.enabled == true ? 1 : 0
+  count = var.enabled == true && local.id != "" ? 1 : 0
   name  = local.id
 }
 
 resource "digitalocean_tag" "name" {
-  count = var.enabled == true ? 1 : 0
+  count = var.enabled == true && local.name != "" ? 1 : 0
   name  = local.name
 }
 
 resource "digitalocean_tag" "environment" {
-  count = var.enabled == true ? 1 : 0
+  count = var.enabled == true && local.environment != "" ? 1 : 0
   name  = local.environment
 }
 
 resource "digitalocean_tag" "managedby" {
-  count = var.enabled == true ? 1 : 0
+  count = var.enabled == true && local.managedby != "" ? 1 : 0
   name  = local.managedby
 }
