@@ -11,7 +11,4 @@ module "labels" {
   environment = "test"
   label_order = ["name", "environment"]
   attributes  = ["private"]
-  extra_tags = {
-    Application = "test"
-  }
 }
