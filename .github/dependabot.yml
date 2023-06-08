@@ -5,6 +5,17 @@
 
 version: 2
 updates:
+- package-ecosystem: "github-actions"
+  directory: "/" # Location of package manifests
+  schedule:
+    interval: "daily"
+  # Add assignees
+  assignees:
+    - "clouddrove-ci"
+  # Add reviewer
+  reviewers:
+    - "approvers"
+  
   - package-ecosystem: "terraform" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -15,6 +26,7 @@ updates:
     # Add reviewer
     reviewers:
       - "approvers"
+      
   - package-ecosystem: "terraform" # See documentation for possible values
     directory: "_examples/complete" # Location of package manifests
     schedule:
