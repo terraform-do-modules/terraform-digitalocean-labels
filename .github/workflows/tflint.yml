@@ -1,4 +1,4 @@
-name: TF-Lint
+name: tf-lint
 on:
   push:
     branches: [ master ]
