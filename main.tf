@@ -12,9 +12,9 @@ locals {
   id_labels = [for l in var.label_order : local.id_context[l] if length(local.id_context[l]) > 0]
 
   id          = lower(join(var.delimiter, local.id_labels, var.attributes))
-  name        = local.enabled == true ? lower(format("%v%s", "Name:-", var.name)) : ""
-  environment = local.enabled == true ? lower(format("%v%s", "Environment:-", var.environment)) : ""
-  managedby   = local.enabled == true ? lower(format("%v%s", "Managedby:-", var.managedby)) : ""
+  name        = local.enabled == true ? format("%v%s", "Name:-", var.name) : ""
+  environment = local.enabled == true ? format("%v%s", "Environment:-", var.environment) : ""
+  managedby   = local.enabled == true ? format("%v%s", "Managedby:-", var.managedby) : ""
 }
 
 ##-----------------------------------------------------------------------------
