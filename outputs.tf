@@ -3,21 +3,21 @@
 #              for resources. You can use terraform-labels to implement a strict naming
 #              convention.
 output "id" {
-  value       = [for labels in digitalocean_tag.id : digitalocean_tag.id]
+  value       = digitalocean_tag.id[0].id
   description = "Disambiguated ID."
 }
 
 output "name" {
-  value       = [for labels in digitalocean_tag.name : digitalocean_tag.name]
+  value       = digitalocean_tag.name[0].name
   description = "Normalized name."
 }
 
 output "environment" {
-  value       = [for labels in digitalocean_tag.environment : digitalocean_tag.environment]
+  value       = digitalocean_tag.environment[0].name
   description = "Normalized environment."
 }
 
 output "managedby" {
-  value       = [for labels in digitalocean_tag.managedby : digitalocean_tag.managedby]
+  value       = digitalocean_tag.environment[0].name
   description = "Normalized managedby."
 }
