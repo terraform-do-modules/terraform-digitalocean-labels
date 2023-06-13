@@ -10,7 +10,7 @@ name : Terraform DigitalOcean Labels
 license: "MIT"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-digitalocean-labels
+github_repo: terraform-do-modules/terraform-digitalocean-labels
 
 # Badges to display
 badges:
