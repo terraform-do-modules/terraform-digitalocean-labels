@@ -2,16 +2,15 @@
 #
 # This is the canonical configuration for the `README.md`
 # Run `make readme` to rebuild the `README.md`
-#
 
 # Name of this project
 name : Terraform DigitalOcean Labels
 
 # License of this project
-license: "MIT"
+license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-digitalocean-labels
+github_repo: terraform-do-modules/terraform-digitalocean-labels
 
 # Badges to display
 badges:
@@ -19,7 +18,7 @@ badges:
     image: "https://img.shields.io/badge/Terraform-v0.15-green"
     url: "https://www.terraform.io"
   - name: "Licence"
-    image: "https://img.shields.io/badge/License-MIT-blue.svg"
+    image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
 
 #  description of this project
@@ -32,7 +31,7 @@ include:
 
 # How to use this project
 usage : |-
-  ### Simple Example
+  ### Example
   Here is an example of how you can use this module in your inventory structure:
   ```hcl
       module "labels" {
@@ -41,5 +40,6 @@ usage : |-
       name        = "labels"
       environment = "test"
       label_order = ["name", "environment"]
+      attributes  = ["private"]
       }
   ```
