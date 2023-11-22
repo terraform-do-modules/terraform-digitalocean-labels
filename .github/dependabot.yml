@@ -5,35 +5,38 @@
 
 version: 2
 updates:
-- package-ecosystem: "github-actions"
-  directory: "/" # Location of package manifests
-  schedule:
-    interval: "daily"
-  # Add assignees
-  assignees:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    assignees:
     - "clouddrove-ci"
-  # Add reviewer
-  reviewers:
+    reviewers:
     - "approvers"
-  
+
   - package-ecosystem: "terraform" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
     # Add assignees
     assignees:
-      - "clouddrove-ci"
+    - "clouddrove-ci"
     # Add reviewer
     reviewers:
-      - "approvers"
-      
+    - "approvers"
+    # Allow up to 3 open pull requests for pip dependencies
+    open-pull-requests-limit: 3
+
   - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "_examples/complete" # Location of package manifests
+    directory: "/_examples/complete" # Location of package manifests
     schedule:
       interval: "weekly"
     # Add assignees
     assignees:
-      - "clouddrove-ci"
+    - "clouddrove-ci"
     # Add reviewer
     reviewers:
-      - "approvers"
+    - "approvers"
+    # Allow up to 3 open pull requests for pip dependencies
+    open-pull-requests-limit: 3
