@@ -18,6 +18,6 @@ output "environment" {
 }
 
 output "managedby" {
-  value       = digitalocean_tag.environment[0].name
+  value       = digitalocean_tag.managedby[0].name
   description = "Normalized managedby."
 }
