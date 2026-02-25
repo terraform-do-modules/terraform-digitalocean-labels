@@ -40,3 +40,13 @@ updates:
     - "approvers"
     # Allow up to 3 open pull requests for pip dependencies
     open-pull-requests-limit: 3
+
+  - package-ecosystem: "terraform"
+    directory: "/_examples/basic"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "clouddrove-ci"
+    reviewers:
+      - "approvers"
+    open-pull-requests-limit: 3
