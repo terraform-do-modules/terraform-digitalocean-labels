@@ -8,7 +8,7 @@ terraform {
     }
   }
 
-  provider_meta "digitalocean" {
-    module_name = "terraform-do-modules/terraform-digitalocean-labels"
-  }
+  # provider_meta "digitalocean" {
+  #   module_name = "terraform-do-modules/terraform-digitalocean-labels"
+  # }
 }
